@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 # Raw URL to the model
-url = "https://raw.githubusercontent.com/umeshpardeshi9545/Ecommerce-regression/blob/main/Ecom (2).pkl"
+url = "https://raw.githubusercontent.com/umeshpardeshi9545/Ecommerce-regression/blob/main/Ecom.pkl"
 
 # Load the model
 try:
