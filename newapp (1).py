@@ -16,29 +16,26 @@ except Exception as e:
     model = None
     st.error(f"Error loading the model: {e}")
 
+# Streamlit UI
 def main():
-    st.title("Titanic Survival Prediction ")
-    
-    # Input variables
-    Avg_Session_Length = st.text_input("Avg Session Length : ")
-    Time_on_App = st.text_input("Time on App")
-    Time_on_Website = st.text_input(" Time on Website ")
-    Length_of_Membership = st.text_input("Length of Membership")
-    
-    if st.button("Predict"):
-        if model is None:
-            st.error("Model could not be loaded. Please check the file URL or format.")
-            return
+    st.title("E-Commerce Yearly Spending Prediction")
 
+    # Input fields
+    Avg_Session_Length = st.number_input("Avg Session Length (minutes)", min_value=0.0, format="%.2f")
+    Time_on_App = st.number_input("Time on App (minutes)", min_value=0.0, format="%.2f")
+    Time_on_Website = st.number_input("Time on Website (minutes)", min_value=0.0, format="%.2f")
+    Length_of_Membership = st.number_input("Length of Membership (years)", min_value=0.0, format="%.2f")
+
+    # Prediction button
+    if st.button("Predict"):
         try:
-            # Convert inputs to floats
-            inputs = [float(Avg_Session_Length), float(Time_on_App), float(Time_on_Website), float(Length_of_Membership)]
-            
             # Make prediction
-            prediction = model.predict([inputs])
-            st.success(f"Prediction: {prediction}")
-        except ValueError:
-            st.error("Please enter valid numeric inputs for all fields.")
+            inputs = [[Avg_Session_Length, Time_on_App, Time_on_Website, Length_of_Membership]]
+            prediction = model.predict(inputs)
+
+            # Display result
+            st.success(f"Predicted Yearly Amount Spent: ${prediction[0]:.2f}")
+
         except Exception as e:
             st.error(f"Error during prediction: {e}")
 
