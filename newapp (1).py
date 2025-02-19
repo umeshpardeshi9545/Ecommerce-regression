@@ -36,7 +36,7 @@ def main():
             
             # Make prediction
             prediction = model.predict([inputs])
-            st.success(f"Prediction: { prediction})
+            st.success(f"Prediction: { prediction}")
         except ValueError:
             st.error("Please enter valid numeric inputs for all fields.")
         except Exception as e:
