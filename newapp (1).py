@@ -20,10 +20,10 @@ def main():
     st.title("Titanic Survival Prediction ")
     
     # Input variables
-    Avg_Session_Length = st.text_input("Avg Session Length : ")
-    Time_on_App = st.text_input("Time on App")
-    Time_on_Website = st.text_input(" Time on Website ")
-    Length_of_Membership = st.text_input("Length of Membership")
+    Avg Session Length = st.text_input("Avg Session Length : ")
+    Time on App = st.text_input("Time on App")
+    Time on Website = st.text_input(" Time on Website ")
+    Length of Membership = st.text_input("Length of Membership")
     
     if st.button("Predict"):
         if model is None:
@@ -32,7 +32,7 @@ def main():
 
         try:
             # Convert inputs to floats
-            inputs = [float(Avg_Session_Length), float(Time_on_App), float(Time_on_Website), float(Length_of_Membership)]
+            inputs = [float(Avg Session Length), float(Time on App), float(Time on Website), float(Length of Membership)]
             
             # Make prediction
             prediction = model.predict([inputs])
