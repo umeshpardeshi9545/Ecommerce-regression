@@ -20,13 +20,12 @@ except Exception as e:
 # Custom background image styling
 page_bg_img = '''
 <style>
-[data-testid="stAppViewContainer"] {
-    background-image: url("https://www.freepik.com/free-vector/abstract-low-poly-triangular-background_26129667.htm#fromView=keyword&page=1&position=41&uuid=9755d5f7-d58b-41f7-b715-b180380a1cb7&query=Background+Design");
-    background-size: cover;
-}
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
-}
+    .stApp {
+        background: url("https://images.unsplash.com/photo-1566207274740-0f6f1a8cbbff");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
