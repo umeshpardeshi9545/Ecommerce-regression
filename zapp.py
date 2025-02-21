@@ -18,19 +18,9 @@ except Exception as e:
 
 
 # Custom background image styling
-page_bg_img = '''
-<style>
-    .stApp {
-        background: url("https://raw.githubusercontent.com/umeshpardeshi9545/Ecommerce-regression/main/abstract_low_poly_triangular_background.jpg
-");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
+image_url = "https://raw.githubusercontent.com/umeshpardeshi9545/Ecommerce-regression/main/abstract_low_poly_triangular_background.jpg"
 
+st.image(image_url, caption="Low Poly Background", use_column_width=True)
 # Streamlit UI
 def main():
     st.markdown("# 🛍️ E-Commerce Yearly Spending Prediction")
