@@ -1,5 +1,7 @@
 import pickle
 import streamlit as st
+import urllib.request
+from sklearn.linear_model import LogisticRegression
 import os
 
 # Set Page Config with a background image
