@@ -20,12 +20,11 @@ except Exception as e:
 # Custom background image styling
 page_bg_img = '''
 <style>
-    body {
-        background-image: url("https://images.unsplash.com/photo-1566207274740-0f6f1a8cbbff");
+    .stApp {
+        background: url("https://images.unsplash.com/photo-1566207274740-0f6f1a8cbbff");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
     }
 </style>
 '''
