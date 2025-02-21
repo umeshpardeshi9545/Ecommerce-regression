@@ -6,13 +6,17 @@ import os
 st.set_page_config(page_title="🛒 E-Commerce Spending Predictor", page_icon="📊", layout="centered")
 
 # Load the model correctly
-model_path = r"C:\Users\Shubh\Downloads\Ecom (2).pkl"  # Use raw string to avoid path errors
+# Raw URL to the model
+url = "https://raw.githubusercontent.com/umeshpardeshi9545/Ecommerce-regression/blob/main/Ecom.pkl"
 
-if not os.path.exists(model_path):
-    st.error("❌ Model file not found! Please check the file path.")
-else:
-    with open(model_path, "rb") as file:
-        model = pickle.load(file)
+# Load the model
+try:
+    with urllib.request.urlopen(url) as response:
+        model_data = response.read()  # Read bytes
+        model = pickle.loads(model_data)  # Load model from bytes
+except Exception as e:
+    model = None
+    st.error(f"Error loading the model: {e}")
 
 # Custom background image styling
 page_bg_img = '''
