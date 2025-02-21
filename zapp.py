@@ -18,8 +18,8 @@ except Exception as e:
 
 # Streamlit UI
 def main():
-    st.title("E-Commerce Yearly Spending Prediction")
-
+    st.markdown("# 🛍️ E-Commerce Yearly Spending Prediction")
+    st.write("🔮 Predict how much a customer will spend yearly based on their app usage behavior!")
     # Input fields
     Avg_Session_Length = st.number_input("Avg Session Length (minutes)", min_value=0.0, format="%.2f")
     Time_on_App = st.number_input("Time on App (minutes)", min_value=0.0, format="%.2f")
