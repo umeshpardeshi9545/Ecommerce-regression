@@ -16,6 +16,21 @@ except Exception as e:
     model = None
     st.error(f"Error loading the model: {e}")
 
+
+# Custom background image styling
+page_bg_img = '''
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://images.unsplash.com/photo-1566207274740-0f6f1a8cbbff");
+    background-size: cover;
+}
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # Streamlit UI
 def main():
     st.markdown("# 🛍️ E-Commerce Yearly Spending Prediction")
