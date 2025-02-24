@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 import urllib.request
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
 
 
 # Raw URL to the model
